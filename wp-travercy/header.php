@@ -41,53 +41,61 @@
             <button class="navbar-toggler" data-toggle="collapse" type="button" data-target="#navNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navNavbar">
-                <ul class="navbar-nav ml-auto mb-5 mb-lg-0">
-                    <li class="nav-item ml-xl-3 ml-lg-2 mr-auto mt-3 mt-lg-0 active">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">
-                        <a href="about.html" class="nav-link">about</a>
-                    </li>
-                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">
-                        <a href="services.html" class="nav-link">services</a>
-                    </li>
-                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0 dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-angle-down"></i> portfolio
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="portfolio-1col.html">
-                                <i class="fa fa-angle-right"></i> Portfolio 1 column page</a>
-                            <a class="dropdown-item" href="portfolio-2col.html">
-                                <i class="fa fa-angle-right"></i> Portfolio 2 column page</a>
-                            <a class="dropdown-item" href="portfolio-3col.html">
-                                <i class="fa fa-angle-right"></i> Portfolio 3 column page</a>
-                            <a class="dropdown-item" href="portfolio-4col.html">
-                                <i class="fa fa-angle-right"></i> Portfolio 4 column page</a>
-                        </div>
-                    </li>
-                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">
-                        <a href="blog.html" class="nav-link">blog</a>
-                    </li>
-                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">
-                        <a href="features.html" class="nav-link">features</a>
-                    </li>
-                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">
-                        <a href="contacts.html" class="nav-link">contacts</a>
-                    </li>
-                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0 mr-4 border-0 dropdown">
-                        <div class="search">
-                            <form class="form-group has-feedback my-auto">
-                                <div class="dropdown-menu" aria-labelledby="searchDropdown">
-                                    <input type="text" class="form-control" name="search" id="search" placeholder="Search the site">
-                                </div>
-                                <i class="fa fa-search form-control-feedback dropdown-toggle" href="#" id="searchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                            </form>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+
+            <?php wp_nav_menu(array(
+                    'theme_location' => 'menu-1',
+                    'container'      => 'navbar-nav',
+                    'container-class'=> 'collapse navbar-collapse',
+                    'menu-class'     => 'navbar-nav'
+            )); ?>
+
+<!--            <div class="collapse navbar-collapse" id="navNavbar">-->
+<!--                <ul class="navbar-nav ml-auto mb-5 mb-lg-0">-->
+<!--                    <li class="nav-item ml-xl-3 ml-lg-2 mr-auto mt-3 mt-lg-0 active">-->
+<!--                        <a href="index.html" class="nav-link">Home</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">-->
+<!--                        <a href="about.html" class="nav-link">about</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">-->
+<!--                        <a href="services.html" class="nav-link">services</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0 dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                            <i class="fa fa-angle-down"></i> portfolio-->
+<!--                        </a>-->
+<!--                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!--                            <a class="dropdown-item" href="portfolio-1col.html">-->
+<!--                                <i class="fa fa-angle-right"></i> Portfolio 1 column page</a>-->
+<!--                            <a class="dropdown-item" href="portfolio-2col.html">-->
+<!--                                <i class="fa fa-angle-right"></i> Portfolio 2 column page</a>-->
+<!--                            <a class="dropdown-item" href="portfolio-3col.html">-->
+<!--                                <i class="fa fa-angle-right"></i> Portfolio 3 column page</a>-->
+<!--                            <a class="dropdown-item" href="portfolio-4col.html">-->
+<!--                                <i class="fa fa-angle-right"></i> Portfolio 4 column page</a>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">-->
+<!--                        <a href="blog.html" class="nav-link">blog</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">-->
+<!--                        <a href="features.html" class="nav-link">features</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0">-->
+<!--                        <a href="contacts.html" class="nav-link">contacts</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item ml-xl-3 ml-lg-2 mt-3 mt-lg-0 mr-4 border-0 dropdown">-->
+<!--                        <div class="search">-->
+<!--                            <form class="form-group has-feedback my-auto">-->
+<!--                                <div class="dropdown-menu" aria-labelledby="searchDropdown">-->
+<!--                                    <input type="text" class="form-control" name="search" id="search" placeholder="Search the site">-->
+<!--                                </div>-->
+<!--                                <i class="fa fa-search form-control-feedback dropdown-toggle" href="#" id="searchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
             <!-- .navbar-collapse -->
         </div>
         <!-- .container -->

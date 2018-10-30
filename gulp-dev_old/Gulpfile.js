@@ -1,4 +1,4 @@
-var themename = 'wp-travercy';
+var themename = 'wp-modus';
 
 var gulp = require('gulp'),
 	// Prepare and optimize code etc

@@ -72,14 +72,14 @@
                 <div class="col from-blog">
                     <h5>from the <strong>BLOG</strong></h5>
                     <div class="media mb-4">
-                        <img class="rounded mr-3" src="src/img/post-img.png">
+                        <img class="rounded mr-3" src="<?php bloginfo('stylesheet_directory'); ?>/img/post-img.png">
                         <div class="media-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             <p class="post-date">26 May, 2013</p>
                         </div>
                     </div>
                     <div class="media">
-                        <img class="rounded mr-3" src="src/img/post-img.png">
+                        <img class="rounded mr-3" src="<?php bloginfo('stylesheet_directory'); ?>/img/post-img.png">
                         <div class="media-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             <p class="post-date">26 May, 2013</p>

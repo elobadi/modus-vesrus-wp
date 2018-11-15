@@ -562,37 +562,37 @@ form button, form .btn {
   border-bottom-right-radius: 4px;
 }
 #about .container .browser-slider .holder_bu_center .browser-windows .content-1 {
-  background: url("../img/img-1.jpeg") no-repeat center;
+  background: url("/wp-content/themes/wp-modus/img/img-1.jpeg") no-repeat center;
   background-size: cover;
   height: 320px;
   width: 580px;
 }
 #about .container .browser-slider .holder_bu_center .browser-windows .content-2 {
-  background: url("../img/img-2.jpeg") no-repeat center;
+  background: url("/wp-content/themes/wp-modus/img/img-2.jpeg") no-repeat center;
   background-size: cover;
   height: 320px;
   width: 580px;
 }
 #about .container .browser-slider .holder_bu_center .browser-windows .content-3 {
-  background: url("../img/img-3.jpeg") no-repeat center;
+  background: url("/wp-content/themes/wp-modus/img/img-3.jpeg") no-repeat center;
   background-size: cover;
   height: 320px;
   width: 580px;
 }
 #about .container .browser-slider .holder_bu_awayL1 .browser-windows .content-1, #about .container .browser-slider .holder_bu_awayR1 .browser-windows .content-1 {
-  background: url("../img/img-1.jpeg") no-repeat center;
+  background: url("/wp-content/themes/wp-modus/img/img-1.jpeg") no-repeat center;
   background-size: cover;
   height: 225px;
   width: 392px;
 }
 #about .container .browser-slider .holder_bu_awayL1 .browser-windows .content-2, #about .container .browser-slider .holder_bu_awayR1 .browser-windows .content-2 {
-  background: url("../img/img-2.jpeg") no-repeat center;
+  background: url("/wp-content/themes/wp-modus/img/img-2.jpeg") no-repeat center;
   background-size: cover;
   height: 225px;
   width: 392px;
 }
 #about .container .browser-slider .holder_bu_awayL1 .browser-windows .content-3, #about .container .browser-slider .holder_bu_awayR1 .browser-windows .content-3 {
-  background: url("../img/img-3.jpeg") no-repeat center;
+  background: url("/wp-content/themes/wp-modus/img/img-3.jpeg") no-repeat center;
   background-size: cover;
   height: 225px;
   width: 392px;
@@ -633,37 +633,37 @@ form button, form .btn {
     width: 8px;
   }
   #about .container .browser-slider .holder_bu_center .browser-windows .content-1 {
-    background: url("../img/img-1.jpeg") no-repeat center;
+    background: url("/wp-content/themes/wp-modus/img/img-1.jpeg") no-repeat center;
     background-size: cover;
     height: 200px;
     width: 400px;
   }
   #about .container .browser-slider .holder_bu_center .browser-windows .content-2 {
-    background: url("../img/img-2.jpeg") no-repeat center;
+    background: url("/wp-content/themes/wp-modus/img/img-2.jpeg") no-repeat center;
     background-size: cover;
     height: 200px;
     width: 400px;
   }
   #about .container .browser-slider .holder_bu_center .browser-windows .content-3 {
-    background: url("../img/img-3.jpeg") no-repeat center;
+    background: url("/wp-content/themes/wp-modus/img/img-3.jpeg") no-repeat center;
     background-size: cover;
     height: 200px;
     width: 400px;
   }
   #about .container .browser-slider .holder_bu_awayL1 .browser-windows .content-1, #about .container .browser-slider .holder_bu_awayR1 .browser-windows .content-1 {
-    background: url("../img/img-1.jpeg") no-repeat center;
+    background: url("/wp-content/themes/wp-modus/img/img-1.jpeg") no-repeat center;
     background-size: cover;
     height: 125px;
     width: 250px;
   }
   #about .container .browser-slider .holder_bu_awayL1 .browser-windows .content-2, #about .container .browser-slider .holder_bu_awayR1 .browser-windows .content-2 {
-    background: url("../img/img-2.jpeg") no-repeat center;
+    background: url("/wp-content/themes/wp-modus/img/img-2.jpeg") no-repeat center;
     background-size: cover;
     height: 125px;
     width: 250px;
   }
   #about .container .browser-slider .holder_bu_awayL1 .browser-windows .content-3, #about .container .browser-slider .holder_bu_awayR1 .browser-windows .content-3 {
-    background: url("../img/img-3.jpeg") no-repeat center;
+    background: url("/wp-content/themes/wp-modus/img/img-3.jpeg") no-repeat center;
     background-size: cover;
     height: 125px;
     width: 250px;
@@ -1422,7 +1422,7 @@ footer .social-footer i {
   margin-left: 0;
   line-height: 0;
   color: #fff;
-  background-color: 0;
+  background-color: unset;
   border: 0;
   padding: 0;
 }

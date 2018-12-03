@@ -5,6 +5,23 @@
 
 get_header();
 ?>
+    <style>
+        /* Changing the "browser-windows" images Dynamically */
+        .content-1 {
+        <?php $window_image_1 = get_field( 'window_image_1' ); ?><?php if ( $window_image_1 ) { ?> background: url("<?php echo $window_image_1['url']; ?>") no-repeat center;
+        <?php } ?>
+        }
+
+        .content-2 {
+        <?php $window_image_2 = get_field( 'window_image_2' ); ?><?php if ( $window_image_2 ) { ?> background: url("<?php echo $window_image_2['url']; ?>") no-repeat center;
+        <?php } ?>
+        }
+
+        .content-3 {
+        <?php $window_image_3 = get_field( 'window_image_3' ); ?><?php if ( $window_image_3 ) { ?> background: url("<?php echo $window_image_3['url']; ?>") no-repeat center;
+        <?php } ?>
+        }
+    </style>
     <!-- SHOWCASE SLIDER -->
     <section id="showcase">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -177,9 +194,8 @@ get_header();
         <div class="container">
             <div class="browser-slider">
                 <div class="about-heading text-center">
-                    <h1>WHY MODUS VERSUS?</h1>
-                    <p>Capacitance cascading integer reflective interface data development high bus cache dithering
-                        transponder.</p>
+                    <h1><?php the_field( 'about_heading' ); ?></h1>
+                    <p><?php the_field( 'about_description' ); ?></p>
                 </div>
                 <div class="row d-none d-md-flex">
                     <div id="wrapper_bu">
@@ -240,15 +256,19 @@ get_header();
             <div class="row second-about">
                 <div class="col-lg-3 col-md-4 px-md-0">
                     <div id="way-us">
-                        <h6 class="pb-4">Why Choose Us ?</h6>
-                        <ul class="list-unstyled">
-                            <li><i class="fa fa-arrow-right"></i> Quisque at massa ipsum</li>
-                            <li><i class="fa fa-arrow-right"></i> Maecenas a lorem augue, egestas</li>
-                            <li><i class="fa fa-arrow-right"></i> Cras vitae felis at lacus eleifend</li>
-                            <li><i class="fa fa-arrow-right"></i> Etiam auctor diam pellentesque</li>
-                            <li><i class="fa fa-arrow-right"></i> Nulla ac massa at dolor</li>
-                            <li><i class="fa fa-arrow-right"></i> Condimentum eleifend vitae vitae</li>
-                        </ul>
+                        <h6 class="pb-4"><?php the_field( 'why_us_heading' ); ?></h6>
+						<?php if ( have_rows( 'why_us_list' ) ) : ?>
+							<?php while ( have_rows( 'why_us_list' ) ) : the_row(); ?>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-arrow-right"></i> <?php the_sub_field( 'reason_1' ); ?></li>
+                                    <li><i class="fa fa-arrow-right"></i> <?php the_sub_field( 'reason_2' ); ?></li>
+                                    <li><i class="fa fa-arrow-right"></i> <?php the_sub_field( 'reason_3' ); ?></li>
+                                    <li><i class="fa fa-arrow-right"></i> <?php the_sub_field( 'reason_4' ); ?></li>
+                                    <li><i class="fa fa-arrow-right"></i> <?php the_sub_field( 'reason_5' ); ?></li>
+                                    <li><i class="fa fa-arrow-right"></i> <?php the_sub_field( 'reason_6' ); ?></li>
+                                </ul>
+							<?php endwhile; ?>
+						<?php endif; ?>
                     </div>
                     <!-- #way-us -->
                 </div>
@@ -259,48 +279,66 @@ get_header();
                     <div id="skills">
                         <!-- <div class="row"> -->
                         <div class="chart-heading">
-                            <p>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque
-                                lectus vehicula mattis. Nulla ac massa at dolor condimentum eleifend vitae vitae
-                                urna.</p>
+                            <p><?php the_field( 'skills_description' ); ?></p>
                         </div>
                         <div class="pie">
                             <div class="row">
 
                                 <div class="col-md col-6 px-md-0 mt-3 mt-sm-0 text-center">
-                                    <div class="contents">
-                                        <div class="pie-wrapper">
-                                            <div class="arc" data-value="50"></div>
-                                            <span class="score">50</span>
-                                        </div>
-                                        <span class="label-text">SUSPENDISSE</span>
-                                    </div>
+									<?php if ( have_rows( 'skill_1' ) ) : ?>
+										<?php while ( have_rows( 'skill_1' ) ) : the_row(); ?>
+                                            <div class="contents">
+                                                <div class="pie-wrapper">
+                                                    <div class="arc"
+                                                         data-value="<?php the_sub_field( 'skill_value' ); ?>"></div>
+                                                    <span class="score"><?php the_sub_field( 'skill_value' ); ?></span>
+                                                </div>
+                                                <span class="label-text"><?php the_sub_field( 'skill_name' ); ?></span>
+                                            </div>
+										<?php endwhile; ?>
+									<?php endif; ?>
                                 </div>
                                 <div class="col-md col-6 px-md-0 mt-3 mt-sm-0 text-center">
-                                    <div class="contents">
-                                        <div class="pie-wrapper">
-                                            <div class="arc" data-value="70"></div>
-                                            <span class="score">70</span>
-                                        </div>
-                                        <span class="label-text">MAECENAS</span>
-                                    </div>
+									<?php if ( have_rows( 'skill_2' ) ) : ?>
+										<?php while ( have_rows( 'skill_2' ) ) : the_row(); ?>
+                                            <div class="contents">
+                                                <div class="pie-wrapper">
+                                                    <div class="arc"
+                                                         data-value="<?php the_sub_field( 'skill_value' ); ?>"></div>
+                                                    <span class="score"><?php the_sub_field( 'skill_value' ); ?></span>
+                                                </div>
+                                                <span class="label-text"><?php the_sub_field( 'skill_name' ); ?></span>
+                                            </div>
+										<?php endwhile; ?>
+									<?php endif; ?>
                                 </div>
                                 <div class="col-md col-6 px-md-0 mt-3 mt-sm-0 text-center">
-                                    <div class="contents">
-                                        <div class="pie-wrapper">
-                                            <div class="arc" data-value="80"></div>
-                                            <span class="score">80</span>
-                                        </div>
-                                        <span class="label-text">ALIQUAM</span>
-                                    </div>
+									<?php if ( have_rows( 'skill_3' ) ) : ?>
+										<?php while ( have_rows( 'skill_3' ) ) : the_row(); ?>
+                                            <div class="contents">
+                                                <div class="pie-wrapper">
+                                                    <div class="arc"
+                                                         data-value="<?php the_sub_field( 'skill_value' ); ?>"></div>
+                                                    <span class="score"><?php the_sub_field( 'skill_value' ); ?></span>
+                                                </div>
+                                                <span class="label-text"><?php the_sub_field( 'skill_name' ); ?></span>
+                                            </div>
+										<?php endwhile; ?>
+									<?php endif; ?>
                                 </div>
                                 <div class="col-md col-6 px-md-0 mt-3 mt-sm-0 text-center">
-                                    <div class="contents">
-                                        <div class="pie-wrapper">
-                                            <div class="arc" data-value="100"></div>
-                                            <span class="score">100</span>
-                                        </div>
-                                        <span class="label-text">HABITASSE</span>
-                                    </div>
+									<?php if ( have_rows( 'skill_4' ) ) : ?>
+										<?php while ( have_rows( 'skill_4' ) ) : the_row(); ?>
+                                            <div class="contents">
+                                                <div class="pie-wrapper">
+                                                    <div class="arc"
+                                                         data-value="<?php the_sub_field( 'skill_value' ); ?>"></div>
+                                                    <span class="score"><?php the_sub_field( 'skill_value' ); ?></span>
+                                                </div>
+                                                <span class="label-text"><?php the_sub_field( 'skill_name' ); ?></span>
+                                            </div>
+										<?php endwhile; ?>
+									<?php endif; ?>
                                 </div>
                             </div>
 
@@ -316,15 +354,14 @@ get_header();
 
                 <div class="col-lg-3 mt-5 mt-lg-0">
                     <div id="testimonial">
-                        <h6 class="pb-2">What Client's Say ?</h6>
+                        <h6 class="pb-2"><?php the_field( 'testimonial_heading' ); ?></h6>
                         <div class="card border-light">
                             <div class="card-body">
-                                Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque
-                                lectus vehicula mattis. Nulla ac massa at dolor condimentum
+								<?php the_field( 'testimonial_body' ); ?>
                             </div>
                         </div>
                         <div class="t-name">
-                            <p>Jhon Doe</p>
+                            <p><?php the_field( 'client_name' ); ?></p>
                         </div>
                     </div>
                 </div>

@@ -382,7 +382,7 @@ get_header();
                 <div class="row mb-5">
                     <div class="col-lg-2 col-md-3 px-lg-0 my-auto">
                         <div class="slider-title">
-                            <h6>Our Happy Clients</h6>
+                            <h6><?php the_field( 'clients_slider_title' ); ?></h6>
                         </div>
                         <!-- .slider-title -->
                     </div>
@@ -410,131 +410,240 @@ get_header();
                 </div>
 
                 <div class="carousel-inner">
+					<?php if ( have_rows( 'first_group' ) ) : ?>
+						<?php while ( have_rows( 'first_group' ) ) : the_row(); ?>
+                            <div class="carousel-item active">
+                                <div class="card-deck text-center">
+									<?php if ( have_rows( 'client_1' ) ) : ?>
+										<?php while ( have_rows( 'client_1' ) ) : the_row(); ?>
+											<?php $first_group_image_1 = get_sub_field( 'first_group_image_1' ); ?>
+											<?php if ( $first_group_image_1 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'first_group_url_1' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $first_group_image_1['url']; ?>"
+                                                             alt="<?php echo $first_group_image_1['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
 
-                    <div class="carousel-item active">
-                        <div class="card-deck text-center">
+										<?php endwhile; ?>
+									<?php endif; ?>
 
-                            <div class="card big-img">
-                                <a href="https://www.getbootstrap.com">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\bootstrap-logo.png"
-                                         alt="Card image cap">
-                                </a>
+									<?php if ( have_rows( 'client_2' ) ) : ?>
+										<?php while ( have_rows( 'client_2' ) ) : the_row(); ?>
+											<?php $first_group_image_2 = get_sub_field( 'first_group_image_2' ); ?>
+											<?php if ( $first_group_image_2 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'first_group_url_2' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $first_group_image_2['url']; ?>"
+                                                             alt="<?php echo $first_group_image_2['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_3' ) ) : ?>
+										<?php while ( have_rows( 'client_3' ) ) : the_row(); ?>
+
+											<?php $first_group_image_3 = get_sub_field( 'first_group_image_3' ); ?>
+											<?php if ( $first_group_image_3 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'first_group_url_3' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $first_group_image_3['url']; ?>"
+                                                             alt="<?php echo $first_group_image_3['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_4' ) ) : ?>
+										<?php while ( have_rows( 'client_4' ) ) : the_row(); ?>
+
+											<?php $first_group_image_4 = get_sub_field( 'first_group_image_4' ); ?>
+											<?php if ( $first_group_image_4 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'first_group_url_4' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $first_group_image_4['url']; ?>"
+                                                             alt="<?php echo $first_group_image_4['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_5' ) ) : ?>
+										<?php while ( have_rows( 'client_5' ) ) : the_row(); ?>
+
+											<?php $first_group_image_5 = get_sub_field( 'first_group_image_5' ); ?>
+											<?php if ( $first_group_image_5 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'first_group_url_5' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $first_group_image_5['url']; ?>"
+                                                             alt="<?php echo $first_group_image_5['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_6' ) ) : ?>
+										<?php while ( have_rows( 'client_6' ) ) : the_row(); ?>
+
+											<?php $first_group_image_6 = get_sub_field( 'first_group_image_6' ); ?>
+											<?php if ( $first_group_image_6 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'first_group_url_6' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $first_group_image_6['url']; ?>"
+                                                             alt="<?php echo $first_group_image_6['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+                                </div>
+                                <!-- .card-deck -->
                             </div>
-                            <!-- .card -->
+                            <!-- .carousel-item -->
+						<?php endwhile; ?>
+					<?php endif; ?>
 
-                            <div class="card big-img">
-                                <a href="https://www.jquery.com">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\jquery-logo.png"
-                                         alt="Card image cap">
-                                </a>
+					<?php if ( have_rows( 'second_group' ) ) : ?>
+						<?php while ( have_rows( 'second_group' ) ) : the_row(); ?>
+                            <div class="carousel-item">
+                                <div class="card-deck text-center">
+									<?php if ( have_rows( 'client_1' ) ) : ?>
+										<?php while ( have_rows( 'client_1' ) ) : the_row(); ?>
+											<?php $second_group_image_1 = get_sub_field( 'second_group_image_1' ); ?>
+											<?php if ( $second_group_image_1 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'second_group_url_1' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $second_group_image_1['url']; ?>"
+                                                             alt="<?php echo $second_group_image_1['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_2' ) ) : ?>
+										<?php while ( have_rows( 'client_2' ) ) : the_row(); ?>
+
+											<?php $second_group_image_2 = get_sub_field( 'second_group_image_2' ); ?>
+											<?php if ( $second_group_image_2 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'second_group_url_2' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $second_group_image_2['url']; ?>"
+                                                             alt="<?php echo $second_group_image_2['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_3' ) ) : ?>
+										<?php while ( have_rows( 'client_3' ) ) : the_row(); ?>
+
+											<?php $second_group_image_3 = get_sub_field( 'second_group_image_3' ); ?>
+											<?php if ( $second_group_image_3 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'second_group_url_3' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $second_group_image_3['url']; ?>"
+                                                             alt="<?php echo $second_group_image_3['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_4' ) ) : ?>
+										<?php while ( have_rows( 'client_4' ) ) : the_row(); ?>
+
+											<?php $second_group_image_4 = get_sub_field( 'second_group_image_4' ); ?>
+											<?php if ( $second_group_image_4 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'second_group_url_4' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $second_group_image_4['url']; ?>"
+                                                             alt="<?php echo $second_group_image_4['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_5' ) ) : ?>
+										<?php while ( have_rows( 'client_5' ) ) : the_row(); ?>
+
+											<?php $second_group_image_5 = get_sub_field( 'second_group_image_5' ); ?>
+											<?php if ( $second_group_image_5 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'second_group_url_5' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $second_group_image_5['url']; ?>"
+                                                             alt="<?php echo $second_group_image_5['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+									<?php if ( have_rows( 'client_6' ) ) : ?>
+										<?php while ( have_rows( 'client_6' ) ) : the_row(); ?>
+
+											<?php $second_group_image_6 = get_sub_field( 'second_group_image_6' ); ?>
+											<?php if ( $second_group_image_6 ) { ?>
+                                                <div class="card big-img">
+                                                    <a href="<?php the_sub_field( 'second_group_url_6' ); ?>">
+                                                        <img class="card-img-top"
+                                                             src="<?php echo $second_group_image_6['url']; ?>"
+                                                             alt="<?php echo $second_group_image_6['alt']; ?>">
+                                                    </a>
+                                                </div>
+                                                <!-- .card -->
+											<?php } ?>
+
+										<?php endwhile; ?>
+									<?php endif; ?>
+
+                                </div>
+                                <!-- .card-deck -->
                             </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="https://www.sass-lang.com">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\sass-logo.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="https://www.npmjs.com">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\npm-logo.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="https://www.git-scm.com">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\git-logo.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="https://www.github.com">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\github-logo.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                        </div>
-                        <!-- .card-deck -->
-                    </div>
-                    <!-- .carousel-item -->
-
-
-                    <div class="carousel-item">
-                        <div class="card-deck text-center">
-
-                            <div class="card big-img">
-                                <a href="#">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\client-brand.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="#">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\client-brand.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="#">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\client-brand.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="#">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\client-brand.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="#">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\client-brand.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                            <div class="card big-img">
-                                <a href="#">
-                                    <img class="card-img-top"
-                                         src="<?php bloginfo( 'stylesheet_directory' ); ?>\img\clients-logos\client-brand.png"
-                                         alt="Card image cap">
-                                </a>
-                            </div>
-                            <!-- .card -->
-
-                        </div>
-                        <!-- .card-deck -->
-                    </div>
-                    <!-- .carousel-item -->
+                            <!-- .carousel-item -->
+						<?php endwhile; ?>
+					<?php endif; ?>
 
                 </div>
                 <!-- .carousel-inner -->

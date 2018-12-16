@@ -122,62 +122,27 @@ get_header();
         <div class="container mt-5">
 
             <div class="row">
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                    <div class="card active">
-                        <div class="card-body text-center">
-                            <i class="fa fa-thumbs-up"></i>
-                            <h5 class="card-title"><?php the_field( 'service_name_1' ); ?></h5>
-                            <p class="card-text"><?php the_field( 'service_description_1' ); ?></p>
-							<?php $service_link_1 = get_field( 'service_link_1' ); ?>
-							<?php if ( $service_link_1 ) { ?>
-                                <a role="button" href="<?php echo $service_link_1['url']; ?>"
-                                   class="btn btn-lg"><?php echo $service_link_1['title']; ?></a>
-							<?php } ?>
+				<?php $loop = new WP_Query( array(
+					'post_type' => 'services',
+					'orderby'   => 'post_id',
+					'order'     => 'ASC'
+				) ); ?>
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="<?php the_field( 'service_icon' ); ?>"></i>
+                                <h5 class="card-title"><?php the_field( 'service_name' ); ?></h5>
+                                <p class="card-text"><?php the_field( 'service_description' ); ?></p>
+	                            <?php $service_link = get_field( 'service_link' ); ?>
+	                            <?php if ( $service_link ) { ?>
+                                    <a role="button" href="<?php echo $service_link['url']; ?>"
+                                       class="btn btn-lg"><?php echo $service_link['title']; ?></a>
+								<?php } ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <i class="fa fa-key"></i>
-                            <h5 class="card-title"><?php the_field( 'service_name_2' ); ?></h5>
-                            <p class="card-text"><?php the_field( 'service_description_2' ); ?></p>
-							<?php $service_link_2 = get_field( 'service_link_2' ); ?>
-							<?php if ( $service_link_2 ) { ?>
-                                <a role="button" href="<?php echo $service_link_2['url']; ?>"
-                                   class="btn btn-lg"><?php echo $service_link_2['title']; ?></a>
-							<?php } ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <i class="fa fa-flag"></i>
-                            <h5 class="card-title"><?php the_field( 'service_name_3' ); ?></h5>
-                            <p class="card-text"><?php the_field( 'service_description_3' ); ?></p>
-							<?php $service_link_3 = get_field( 'service_link_3' ); ?>
-							<?php if ( $service_link_3 ) { ?>
-                                <a role="button" href="<?php echo $service_link_3['url']; ?>"
-                                   class="btn btn-lg"><?php echo $service_link_3['title']; ?></a>
-							<?php } ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <i class="fa fa-flask"></i>
-                            <h5 class="card-title"><?php the_field( 'service_name_4' ); ?></h5>
-                            <p class="card-text"><?php the_field( 'service_description_4' ); ?></p>
-							<?php $service_link_4 = get_field( 'service_link_4' ); ?>
-							<?php if ( $service_link_4 ) { ?>
-                                <a role="button" href="<?php echo $service_link_4['url']; ?>"
-                                   class="btn btn-lg"><?php echo $service_link_4['title']; ?></a>
-							<?php } ?>
-                        </div>
-                    </div>
-                </div>
+				<?php endwhile; ?>
             </div>
             <!-- .row -->
 

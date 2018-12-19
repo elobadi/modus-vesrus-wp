@@ -143,6 +143,7 @@ get_header();
                         </div>
                     </div>
 				<?php endwhile; ?>
+                <?php wp_reset_query() ?>
             </div>
             <!-- .row -->
 

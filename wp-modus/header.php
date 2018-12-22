@@ -44,13 +44,13 @@
 
             <?php wp_nav_menu(array(
                     'theme_location' => 'menu-1',
-//                    'container'      => 'nav',
+                    'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                    'container'      => 'nav',
                     'container_class'=> 'collapse navbar-collapse',
                     'container_id'   => 'navNavbar',
                     'menu_class'     => 'navbar-nav ml-auto mb-5 mb-lg-0',
-	                'before'         => '<li class="nav-item ml-xl-3 ml-lg-2 mr-auto mt-3 mt-lg-0">',
-                    'after'          => '<li>',
-	                'link_before'    => '<a href="" class="nav-link">'
+                    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'          => new WP_Bootstrap_Navwalker(),
             )); ?>
 
 <!--            <div class="collapse navbar-collapse" id="navNavbar">-->

@@ -5,34 +5,10 @@
 
 get_header();
 ?>
-    <!-- SUB HEADER -->
-    <div id="sub-header">
-        <div class="container">
-            <div class="row">
-                <div class="col text-left my-auto">
-                    <h6 class="text-uppercase"><?php the_field( 'page_name' ); ?></h6>
-                </div>
-                <div class="col text-right my-auto">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb float-right">
-							<?php $home_page = get_field( 'home_page' ); ?>
-							<?php if ( $home_page ) { ?>
-                                <li class="breadcrumb-item"><a
-                                            href="<?php echo $home_page['url']; ?>"><?php echo $home_page['title']; ?></a>
-                                </li>
-							<?php } ?>
-                            <li class="breadcrumb-item active"
-                                aria-current="page"><?php the_field( 'page_name' ); ?></li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END OF SUB HEADER
-	=========================================== -->
-    <!-- ABOUT HEADING -->
 
+<?php get_template_part( 'template-parts/content', 'sub-header' ); ?>
+
+    <!-- ABOUT HEADING -->
     <div id="about-heading">
         <div class="container">
             <div class="row">
@@ -250,26 +226,9 @@ get_header();
     <!-- END OF OUR TEAM
 	=========================================== -->
 
-    <!-- SECOND HEADING -->
-    <div id="second-heading">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <h1><?php the_field( 'second_heading' ); ?></h1>
-                    <p><?php the_field( 'second_heading_description' ); ?></p>
-                </div>
+<?php get_template_part( 'template-parts/content', 'second-heading' ); ?>
 
-            </div>
-        </div>
-    </div>
-    <!-- second-heading -->
-
-    <!-- CLIENTS -->
 <?php get_template_part( 'template-parts/content', 'clients' ); ?>
-
-    <!-- #clients -->
-    <!-- END OF CLIENTS
-	=========================================== -->
 
 <?php
 get_footer();

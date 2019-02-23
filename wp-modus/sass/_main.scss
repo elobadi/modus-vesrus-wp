@@ -1160,7 +1160,7 @@ footer {
 /*
 /******************************************************************************/
 
- /* about.html page
+/* about.html page
 */
 
 // sub-header //
@@ -1733,6 +1733,7 @@ footer {
   }
 }
 
+
 #pagination {
   margin-top: 5rem;
 
@@ -1780,6 +1781,7 @@ footer {
 
 /*
 /******************************************************************************/
+
 
 /* portfolio-2col.html page
 */
@@ -1849,6 +1851,28 @@ footer {
           bottom: 0;
           height: 100%;
         }
+      }
+    }
+  }
+  /* Portfolio Cards Width */
+  &.tow-col {
+    .card-deck {
+      .card {
+        max-width: 48%;
+      }
+    }
+  }
+  &.three-col {
+    .card-deck {
+      .card {
+        max-width: 30.3333%;
+      }
+    }
+  }
+  &.four-col {
+    .card-deck {
+      .card {
+        max-width: 23%;
       }
     }
   }
@@ -2378,7 +2402,8 @@ footer {
         }
 
         // Medium devices (tablets, less than 992px)
-        @media (max-width: 991.98px) {}
+        @media (max-width: 991.98px) {
+        }
 
         // Small devices (landscape phones, less than 768px)
         @media (max-width: 767.98px) {
@@ -2412,7 +2437,8 @@ footer {
         }
 
         // Extra small devices (portrait phones, less than 576px)
-        @media (max-width: 575.98px) {}
+        @media (max-width: 575.98px) {
+        }
       }
     }
 

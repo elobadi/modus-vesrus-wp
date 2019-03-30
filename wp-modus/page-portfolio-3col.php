@@ -20,7 +20,8 @@ get_header();
 			<?php $loop = new WP_Query( array(
 				'post_type' => 'portfolio',
 				'orderby'   => 'post_id',
-				'order'     => 'ASC'
+				'order'     => 'ASC',
+                'posts_per_page' => '9'
 			) ); ?>
 			<?php while ( $loop->have_posts() ) :
 				$loop->the_post(); ?>
@@ -139,79 +140,7 @@ get_header();
   =========================================== -->
 
 
-    <!-- PAGINATION -->
-    <div id="pagination">
-        <div class="container">
-            <div class="row d-none d-md-flex">
-                <div class="col">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link active" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">4</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">5</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">...</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">10</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">11</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">12</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="row d-flex d-md-none">
-                <div class="col">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link active" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">...</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">12</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END OF PAGINATION -->
+<?php wpbs_pagination($loop); ?>
 
 
 <?php
